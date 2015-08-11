@@ -1,0 +1,6 @@
+{
+  "name": "rails-centos",
+  "run_list": [
+    "recipe[iptables::disabled]"
+  ]
+}
