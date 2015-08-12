@@ -64,3 +64,59 @@ Next Steps
 ==========
 
 Read the README file in each of the subdirectories for more information about what goes in those directories.
+
+### .chef/knife.rbファイルを生成する
+~~~
+local_mode true
+
+chef_repo_dir = File.absolute_path( File.dirname(__FILE__) + "/.." )
+cookbook_path ["#{chef_repo_dir}/cookbooks"]
+node_path     "#{chef_repo_dir}/nodes"
+role_path     "#{chef_repo_dir}/roles"
+ssl_verify_mode  :verify_peer
+~~~
+
+### スケルトンの生成
+~~~
+$ chef generate repo chef-repo
+~~~
+
+### レシピを作成する
+~~~
+$ knife cookbook create iptables
+$ knife cookbook create rbenv
+$ knife cookbook create mysql
+~~~
+
+
+### 生成された空ディレクトリに.gitkeepファイルを生成する
+~~~
+$ find . -type d -name .git -prune -o -type d -empty -exec touch {}/.gitkeep \;
+~~~
+
+### リモートホストにchef_clientをセットアップし、nodeファイルを作成する
+~~~
+$ knife zero bootstrap capi_test -x vagrant --node-name vagrant --sudo
+~~~
+
+### roleファイルを作成する
+~~~
+$ EDITOR=vim knife role create rails-centos
+~~~
+
+### ノードにロールを追加する
+~~~
+$ knife node run_list add vagrant 'role[rails-centos]'
+~~~
+
+### ロールにレシピを追加する
+~~~
+$ knife role run_list add rails-centos 'recipe[iptables::disabled]'
+~~~
+
+### nodeファイルに書かれた内容をリモートホストに適用する
+~~~
+$ knife zero chef_client 'name:vagrant' -x vagrant -i /Users/amasok/works/capi_test/vagrant/.vagrant/machines/default/virtualbox/private_key -p 2222 --sudo
+~~~
+
+リモートホスト＝ノード<-ロール<-レシピ
