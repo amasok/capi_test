@@ -1,0 +1,21 @@
+{
+  "id": "app2",
+  "name": {
+    "encrypted_data": "4PTeSO7uc7LjMA+vc/8jqqQwTCoG0kqtvWzEs2o2NXk=\n",
+    "iv": "cF9niKFmQI/wwVCuH/R5bA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "password": {
+    "encrypted_data": "xhd3liAA3zzkqxTXeJ3j9TuRvzuyiXaT383QEFCGVqNKaQq0dhdT1r1jq5rd\n0GVElperQto631XNw0Ph4CY8kA==\n",
+    "iv": "mt+Hos0k8ReA0coqjpDNag==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "ssh_key": {
+    "encrypted_data": "WxtRT1wtunQ85OnZOE+Zt9JntLltfmEl8VSnlHyNHJPTMvDHifMCxuwKAtjb\nMgjVG10AjlcqNScSLpWE+a2McaV83zNu1QbLQYDkhC4dgkIEYRFCzdeFmy/8\nGM+pAOw+v7fdEYF1EMccDrIyQaoIc7bb7eXuLsPPpeG43vLBsqcjhLua7Ey8\nWiO9kdtLqOz2fsPd5Cd+4kJ9SP9Y6/uQcyfzMNXDuI6j2O0JfmShktHg25X9\nRxJ70bW6oEsVDgGDgClOQ9px8RcFDkYq4QrMbPNFvDhFSdeWU+PvvwRbpLSp\nZgiFrW/hj4/EXE1nace1Tb8UdkX/Uh9ybPvg+D4sfEVJQHk+ytFniP1Vvpnj\ngglikIK9JnaA/+GbPfdwUp/YVB3Gia831Dqx/QJ+5rU0Aut9mXXOkrOHtpPW\nr5utFBwHGo4Yw9DP9H+a+ClKAWY3GmlWFQEvbkiXa/Dk5w4sPthRVXdqkr7e\nOOKRlJ4FYrf9uRaB8ccstvTkjcOTrq+4szuu/UkrdJof/mR2lImRBxAl4gSS\nmPKqp9qSPplQ5JLcs7vMTRk+oAmvYO3CYDnP\n",
+    "iv": "Wiw8GlNThiZm6pn1VmaCUA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

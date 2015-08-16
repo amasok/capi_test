@@ -416,15 +416,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "366487",
-              "packets": "349",
+              "bytes": "425969",
+              "packets": "414",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "366487",
-              "packets": "349",
+              "bytes": "425969",
+              "packets": "414",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -434,16 +434,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "355744",
-              "packets": "3461",
+              "bytes": "390452",
+              "packets": "3555",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "6365076",
-              "packets": "6047",
+              "bytes": "6416902",
+              "packets": "6201",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -460,8 +460,8 @@
               "collisions": "0"
             },
             "rx": {
-              "bytes": "144800",
-              "packets": "724",
+              "bytes": "150200",
+              "packets": "751",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -929,7 +929,7 @@
       }
     },
     "current_user": "vagrant",
-    "ohai_time": 1439337415.839505,
+    "ohai_time": 1439338229.412797,
     "dmi": {
       "dmidecode_version": "2.11",
       "smbios_version": "2.5",
@@ -1085,8 +1085,8 @@
     "filesystem": {
       "/dev/mapper/VolGroup-lv_root": {
         "kb_size": "512971376",
-        "kb_used": "1105844",
-        "kb_available": "485808012",
+        "kb_used": "1105848",
+        "kb_available": "485808008",
         "percent_used": "1%",
         "mount": "/",
         "fs_type": "ext4",
@@ -1120,8 +1120,8 @@
       },
       "vagrant": {
         "kb_size": "243941376",
-        "kb_used": "52549720",
-        "kb_available": "191391656",
+        "kb_used": "52550316",
+        "kb_available": "191391060",
         "percent_used": "22%",
         "mount": "/vagrant",
         "fs_type": "vboxsf",
@@ -1269,31 +1269,31 @@
         "free": "2621432kB"
       },
       "total": "469644kB",
-      "free": "255812kB",
-      "buffers": "14056kB",
-      "cached": "108076kB",
-      "active": "125580kB",
-      "inactive": "41072kB",
-      "dirty": "68kB",
+      "free": "258984kB",
+      "buffers": "14256kB",
+      "cached": "108096kB",
+      "active": "123488kB",
+      "inactive": "41112kB",
+      "dirty": "40kB",
       "writeback": "0kB",
-      "anon_pages": "44496kB",
-      "mapped": "10472kB",
-      "slab": "33460kB",
-      "slab_reclaimable": "11436kB",
-      "slab_unreclaim": "22024kB",
-      "page_tables": "2908kB",
+      "anon_pages": "42228kB",
+      "mapped": "9696kB",
+      "slab": "33116kB",
+      "slab_reclaimable": "11376kB",
+      "slab_unreclaim": "21740kB",
+      "page_tables": "2276kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "2856252kB",
-      "committed_as": "106424kB",
+      "committed_as": "98984kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "8608kB",
       "vmalloc_chunk": "34359723516kB"
     },
-    "uptime_seconds": 21750,
-    "uptime": "6 hours 02 minutes 30 seconds",
-    "idletime_seconds": 21705,
-    "idletime": "6 hours 01 minutes 45 seconds",
+    "uptime_seconds": 22563,
+    "uptime": "6 hours 16 minutes 03 seconds",
+    "idletime_seconds": 22516,
+    "idletime": "6 hours 15 minutes 16 seconds",
     "block_device": {
       "ram0": {
         "size": "32768",
@@ -1428,10 +1428,10 @@
       }
     },
     "recipes": [
-
+      "iptables::disabled"
     ],
     "roles": [
-
+      "rails-centos"
     ]
   },
   "run_list": [

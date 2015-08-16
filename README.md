@@ -116,7 +116,37 @@ $ knife role run_list add rails-centos 'recipe[iptables::disabled]'
 
 ### nodeファイルに書かれた内容をリモートホストに適用する
 ~~~
-$ knife zero chef_client 'name:vagrant' -x vagrant -i /Users/amasok/works/capi_test/vagrant/.vagrant/machines/default/virtualbox/private_key -p 2222 --sudo
+$ knife zero chef_client 'name:vagrant' -x vagrant -i ~/works/capi_test/vagrant/.vagrant/machines/default/virtualbox/private_key -p 2222 --sudo
+~~~
+
+### data_bagsのシークレットキーを作っておく
+~~~
+openssl rand -base64 512 > .chef/data_bag_key
+~~~
+
+### data_bagsのシークレットキーをknife.rbに登録
+~~~knife.rb
+encrypted_data_bag_secret ".chef/data_bag_key"
+~~~
+
+### data_bagsにデータを作成
+~~~
+$ knife data bag create users app --secret-file .chef/data_bag_key
+~~~
+
+### data_basのデータを編集
+~~~
+$ knife data bag edit users app
+~~~
+
+### Userのデータ例
+~~~
+{
+  "id": "app",
+  "name": "app",
+  "password": "$1$xxxxxxxxxxxxxxxxxxxxxxxxxxxxx", #openssl passwd -1 "dalmore"
+  "ssh_key": "ssh-rsa xxxxxxxxxxxxxxxxxxxxxxxxx" #公開キー
+}
 ~~~
 
 リモートホスト＝ノード<-ロール<-レシピ
